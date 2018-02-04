@@ -9,6 +9,12 @@
 	*/
 
 	/**
+	 * Verry ugly fix to calm the linter warning: [polymer-ide] Unable to resolve superclass Cosmoz.Tree
+	 * See https://github.com/Polymer/polymer-linter/issues/63#issuecomment-288168808
+	 */
+	customElements.define('Cosmoz.Tree', class extends HTMLElement {});
+
+	/**
 	 * Cosmoz.DefaultTree
 	 *
 	 * @constructor
@@ -20,7 +26,6 @@
 	 * @param {String} options.pathStringSeparator ["/"] (The string the path should get separated with.)
 	 * @param {String} options.pathLocatorSeparator ["."] (The string which separates the path segments of a path locator.)
 	*/
-	/* eslint-disable */
 	class CosmozDefaultTree extends Cosmoz.Tree {
 		constructor(treeData, options = {}) {
 			super();
